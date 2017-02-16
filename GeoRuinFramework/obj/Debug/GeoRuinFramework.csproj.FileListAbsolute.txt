@@ -1,0 +1,5 @@
+F:\Projetos\GitHub\GeoRuin\GeoRuinFramework\bin\Debug\GeoRuinFramework.dll
+F:\Projetos\GitHub\GeoRuin\GeoRuinFramework\bin\Debug\GeoRuinFramework.pdb
+F:\Projetos\GitHub\GeoRuin\GeoRuinFramework\obj\Debug\GeoRuinFramework.csprojResolveAssemblyReference.cache
+F:\Projetos\GitHub\GeoRuin\GeoRuinFramework\obj\Debug\GeoRuinFramework.dll
+F:\Projetos\GitHub\GeoRuin\GeoRuinFramework\obj\Debug\GeoRuinFramework.pdb

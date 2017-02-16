@@ -1,0 +1,364 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PaginaBase.master.cs" Inherits="GeoRuin.MasterPages.PaginaBase" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="iso-8859-1" />
+	<meta content="" name="description" />
+	<meta content="width=device-width" name="viewport" />
+    <meta http-equiv="refresh" content="2701" />
+
+    <title>Geo.Ruin: Vila Real</title>
+
+    <link href="/Images/App/General/Favicon/favicon.ico" rel="shortcut icon" />
+    
+    <link href="/Content/css/custom/app.css" rel="stylesheet" />
+    <link href="/Content/font-awesome.css" rel="stylesheet" />
+    <link href="/Content/css/climacons/climacons-font.css" rel="stylesheet" />
+    <link href="/Content/css/rickshaw/rickshaw.min.css" rel="stylesheet" />
+    <link href="/Content/css/style.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+    
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+
+        <div class="app layout-fixed-header">
+            <div class="main-panel">
+                <header class="header navbar">
+                    <div class="brand visible-xs">
+                        <div class="brand-logo">
+                            <img alt="" height="20" src="Images/App/General/Logo/GR_Black.png"></div>
+                        <div class="toggle-chat">
+                            <a class="hamburger-icon v2 visible-xs" data-toggle="layout-chat-open" href="javascript:;"><span></span><span></span><span></span></a>
+                        </div>
+                    </div>
+                    <ul class="nav navbar-nav hidden-xs">
+                        <li>
+                            <img src="Images/App/General/Logo/GR_Black.png" class="logoimg" />
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right hidden-xs">
+                        <li>
+                            <a data-toggle="dropdown" href="#"><i class="fa fa-envelope-o"></i>
+                                <div class="status bg-danger border-danger animated bounce"></div>
+                            </a>
+                            <ul class="dropdown-menu notifications">
+                                <li class="notifications-header">
+                                    <p class="text-muted small">Tem 3 mensagens novas</p>
+                                </li>
+                                <li>
+                                    <ul class="notifications-list">
+                                        <li>
+                                            <a href="javascript:;"><span class="pull-left mt2 mr15">
+                                                <img alt="" class="avatar avatar-xs img-circle" src="images/avatar.21d1cc35.jpg"></span>
+                                                <div class="overflow-hidden">
+                                                    <span>Sean launched a new application</span> <span class="time">2 seconds ago</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <div class="pull-left mt2 mr15">
+                                                    <div class="circle-icon bg-danger">
+                                                        <i class="fa fa-chain-broken"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="overflow-hidden">
+                                                    <span>Removed chrome from app list</span> <span class="time">4 Hours ago</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;"><span class="pull-left mt2 mr15">
+                                                <img alt="" class="avatar avatar-xs img-circle" src="images/face3.0306ffff.jpg"></span>
+                                                <div class="overflow-hidden">
+                                                    <span class="text-muted">Jack Hunt has registered</span> <span class="time">9 hours ago</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="notifications-footer">
+                                    <a href="javascript:;">Ver todas as mensagens</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a data-toggle="dropdown" href="#"><i class="fa fa-bell-o"></i>
+                                <div class="status bg-danger border-danger animated bounce"></div>
+                            </a>
+                            <ul class="dropdown-menu notifications">
+                                <li class="notifications-header">
+                                    <p class="text-muted small">Tem 3 novas notificações</p>
+                                </li>
+                                <li>
+                                    <ul class="notifications-list">
+                                        <li>
+                                            <a href="javascript:;"><span class="pull-left mt2 mr15">
+                                                <img alt="" class="avatar avatar-xs img-circle" src="images/avatar.21d1cc35.jpg"></span>
+                                                <div class="overflow-hidden">
+                                                    <span>Sean launched a new application</span> <span class="time">2 seconds ago</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <div class="pull-left mt2 mr15">
+                                                    <div class="circle-icon bg-danger">
+                                                        <i class="fa fa-chain-broken"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="overflow-hidden">
+                                                    <span>Removed chrome from app list</span> <span class="time">4 Hours ago</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;"><span class="pull-left mt2 mr15">
+                                                <img alt="" class="avatar avatar-xs img-circle" src="images/face3.0306ffff.jpg"></span>
+                                                <div class="overflow-hidden">
+                                                    <span class="text-muted">Jack Hunt has registered</span> <span class="time">9 hours ago</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="notifications-footer">
+                                    <a href="javascript:;">Ver todas as notificações</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a data-toggle="dropdown" href="javascript:;">
+                                <img id="ImgProfile" runat="server" alt="user" class="header-avatar img-circle ml10" title="user">
+                                <span id="NomeUtilizador" runat="server" class="pull-left"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#">Perfil</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">Password</a>
+                                </li>
+                                <%--<li>
+                                    <a href="javascript:;"><span class="label bg-danger pull-right">34</span> <span>Notifications</span></a>
+                                </li>--%>
+                                <li>
+                                    <a href="#">Definições</a>
+                                </li>
+                                <li>
+                                    <a href="#">Logout</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="hamburger-icon v2" data-toggle="layout-chat-open" href="javascript:;"><span></span><span></span><span></span></a>
+                        </li>
+                    </ul>
+                </header>
+                <div class="main-content">
+
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                    
+                </div>
+            </div>
+            <footer class="content-footer">
+                <nav class="footer-right">
+                    <ul class="nav">
+                        <li>
+                            <a href="#">Contacto</a>
+                        </li>
+                        <li>
+                            <a class="scroll-up" href="#"><i class="fa fa-arrow-up"></i></a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="footer-left">
+                    <ul class="nav">
+                        <li>
+                            <a href="/Home">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">Sobre o GeoRuin</a>
+                        </li>
+                        <li>
+                            <a href="#">Reportar um Edifício</a>
+                        </li>
+                    </ul>
+                </nav>
+            </footer>
+            <div class="chat-panel">
+                <div class="chat-inner">
+                    <div class="chat-users">
+                        <div class="nav-justified-xs">
+                            <ul class="nav nav-tabs nav-justified">
+                                <li class="active">
+                                    <a data-toggle="tab" href="#chat-list">Chat</a>
+                                </li>
+                                <li>
+                                    <a data-toggle="tab" href="#market">Favourites</a>
+                                </li>
+                                <li>
+                                    <a data-toggle="tab" href="#activity">Activity</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="chat-list">
+                                <div class="chat-group">
+                                    <div class="chat-group-header">
+                                        Favourites
+                                    </div>
+                                    <a href="javascript:;"><span class="status-online"></span><span>Catherine Moreno</span></a> <a href="javascript:;"><span class="status-online"></span><span>Denise Peterson</span></a> <a href="javascript:;"><span class="status-away"></span><span>Charles Wilson</span></a> <a href="javascript:;"><span class="status-away"></span><span>Melissa Welch</span></a> <a href="javascript:;"><span class="status-no-disturb"></span><span>Vincent Peterson</span></a> <a href="javascript:;"><span class="status-offline"></span><span>Pamela Wood</span></a>
+                                </div>
+                                <div class="chat-group">
+                                    <div class="chat-group-header">
+                                        Online Friends
+                                    </div>
+                                    <a href="javascript:;"><span class="status-online"></span><span>Tammy Carpenter</span></a> <a href="javascript:;"><span class="status-away"></span><span>Emma Sullivan</span></a> <a href="javascript:;"><span class="status-no-disturb"></span><span>Andrea Brewer</span></a> <a href="javascript:;"><span class="status-online"></span><span>Sean Carpenter</span></a>
+                                </div>
+                                <div class="chat-group">
+                                    <div class="chat-group-header">
+                                        Offline
+                                    </div>
+                                    <a href="javascript:;"><span class="status-offline"></span><span>Denise Peterson</span></a> <a href="javascript:;"><span class="status-offline"></span><span>Jose Rivera</span></a> <a href="javascript:;"><span class="status-offline"></span><span>Diana Robertson</span></a> <a href="javascript:;"><span class="status-offline"></span><span>William Fields</span></a> <a href="javascript:;"><span class="status-offline"></span><span>Emily Stanley</span></a> <a href="javascript:;"><span class="status-offline"></span><span>Jack Hunt</span></a> <a href="javascript:;"><span class="status-offline"></span><span>Sharon Rice</span></a> <a href="javascript:;"><span class="status-offline"></span><span>Mary Holland</span></a> <a href="javascript:;"><span class="status-offline"></span><span>Diane Hughes</span></a> <a href="javascript:;"><span class="status-offline"></span><span>Steven Smith</span></a> <a href="javascript:;"><span class="status-offline"></span><span>Emily Henderson</span></a> <a href="javascript:;"><span class="status-offline"></span><span>Wayne Kelly</span></a> <a href="javascript:;"><span class="status-offline"></span><span>Jane Garcia</span></a> <a href="javascript:;"><span class="status-offline"></span><span>Jose Jimenez</span></a> <a href="javascript:;"><span class="status-offline"></span><span>Rachel Burton</span></a> <a href="javascript:;"><span class="status-offline"></span><span>Samantha Ruiz</span></a>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="market">
+                                <div class="favourite-list">
+                                    <a href="#">
+                                        <div class="media-left relative">
+                                            <img alt="avatar" class="img-circle avatar avatar-xs" src="images/avatar.21d1cc35.jpg">
+                                            <div class="status bg-success border-white mr10"></div>
+                                        </div>
+                                        <div class="media-body">
+                                            <span class="block">Catherine Moreno</span> <span class="text-muted">Online</span>
+                                        </div>
+                                    </a><a href="#">
+                                        <div class="media-left relative">
+                                            <img alt="avatar" class="img-circle avatar avatar-xs" src="images/face1.75317f48.jpg">
+                                            <div class="status bg-success border-white mr10"></div>
+                                        </div>
+                                        <div class="media-body">
+                                            <span class="block">Denise Peterson</span> <span class="text-muted">Online</span>
+                                        </div>
+                                    </a><a href="#">
+                                        <div class="media-left relative">
+                                            <img alt="avatar" class="img-circle avatar avatar-xs" src="images/face3.0306ffff.jpg">
+                                            <div class="status bg-default border-white mr10"></div>
+                                        </div>
+                                        <div class="media-body">
+                                            <span class="block">Charles Wilson</span> <span class="text-muted">Busy</span>
+                                        </div>
+                                    </a><a href="#">
+                                        <div class="media-left relative">
+                                            <img alt="avatar" class="img-circle avatar avatar-xs" src="images/face4.cea90747.jpg">
+                                            <div class="status bg-danger border-white mr10"></div>
+                                        </div>
+                                        <div class="media-body">
+                                            <span class="block">Melissa Welch</span> <span class="text-muted">Offline</span>
+                                        </div>
+                                    </a><a href="#">
+                                        <div class="media-left relative">
+                                            <img alt="avatar" class="img-circle avatar avatar-xs" src="images/face5.535c103a.jpg">
+                                            <div class="status bg-danger border-white mr10"></div>
+                                        </div>
+                                        <div class="media-body">
+                                            <span class="block">Vincent Peterson</span> <span class="text-muted">Offline</span>
+                                        </div>
+                                    </a><a href="#">
+                                        <div class="media-left relative">
+                                            <img alt="avatar" class="img-circle avatar avatar-xs" src="images/avatar.21d1cc35.jpg">
+                                            <div class="status bg-danger border-white mr10"></div>
+                                        </div>
+                                        <div class="media-body">
+                                            <span class="block">Pamela Wood</span> <span class="text-muted">Offline</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="activity">
+                                <ol class="activity-feed">
+                                    <li class="feed-item"><span>Launched a new application</span> <time datetime="2015-01-30 00:00">2 seconds ago</time></li>
+                                    <li class="feed-item inactive"><span>Removed chrome from app list</span> <time datetime="2015-01-20 00:00">Jan 20</time></li>
+                                    <li class="feed-item"><span>Approved new user "Jack hunt"</span> <time datetime="2015-01-02 00:00">Jan 02</time></li>
+                                    <li class="feed-item active"><span>Executed new cron jobs on server with id 67gyu789</span> <time datetime="2014-12-12 00:00">Dec 12</time></li>
+                                    <li class="feed-item"><span class="text">Added paypal to list payment options</span> <time datetime="2014-12-01 00:00">Dec 01</time></li>
+                                    <li class="feed-item"><span>Added 6 new calendar events</span> <time datetime="2014-08-30 00:00">Aug 30</time></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-conversation">
+                        <div class="chat-header">
+                            <a class="chat-back" href="javascript:;"><i class="fa fa-angle-left"></i></a>
+                            <div class="chat-header-title">
+                                Charles Wilson
+                            </div>
+                            <a class="chat-right" href="javascript:;"><i class="fa fa-circle-thin"></i></a>
+                        </div>
+                        <div class="chat-conversation-content">
+                            <p class="text-center text-muted small text-uppercase bold pb15">Yesterday</p>
+                            <div class="chat-conversation-user them">
+                                <div class="chat-conversation-message">
+                                    <p>Hey.</p>
+                                </div>
+                            </div>
+                            <div class="chat-conversation-user them">
+                                <div class="chat-conversation-message">
+                                    <p>How are the wife and kids, Taylor?</p>
+                                </div>
+                            </div>
+                            <div class="chat-conversation-user me">
+                                <div class="chat-conversation-message">
+                                    <p>Pretty good, Samuel.</p>
+                                </div>
+                            </div>
+                            <p class="text-center text-muted small text-uppercase bold pb15">Today</p>
+                            <div class="chat-conversation-user them">
+                                <div class="chat-conversation-message">
+                                    <p>Curabitur blandit tempus porttitor.</p>
+                                </div>
+                            </div>
+                            <div class="chat-conversation-user me">
+                                <div class="chat-conversation-message">
+                                    <p>Goodnight!</p>
+                                </div>
+                            </div>
+                            <div class="chat-conversation-user them">
+                                <div class="chat-conversation-message">
+                                    <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat-conversation-footer">
+                            <button class="chat-input-tool"><i class="fa fa-camera"></i></button>
+                            <div class="chat-input" contenteditable=""></div>
+                            <button class="chat-send"><i class="fa fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+
+    <script src="Scripts/app.js"></script>
+    <script src="Scripts/d3.min.js"></script>
+    <script src="Scripts/rickshaw.min.js"></script>
+    <script src="Scripts/jquery.flot.js"></script>
+    <script src="Scripts/jquery.flot.resize.js"></script>
+    <script src="Scripts/jquery.flot.categories.js"></script>
+    <script src="Scripts/jquery.flot.pie.js"></script>
+    <script src="Scripts/costum.js"></script>
+
+        
+    
+</body>
+</html>

@@ -81,11 +81,12 @@
     <Content Include="Images\face3.0306ffff.jpg" />
     <Content Include="Images\face4.cea90747.jpg" />
     <Content Include="Images\face5.535c103a.jpg" />
-    <Content Include="Images\Favicon\favicon.ico" />
+    <Content Include="Images\App\General\Favicon\favicon.ico" />
     <Content Include="Images\logo-dark.5ba260bb.png" />
     <Content Include="Images\logo.c5cdf202.png" />
-    <Content Include="Images\Logo\GR_Grey.png" />
-    <Content Include="Images\Logo\GR_Black.png" />
+    <Content Include="Images\App\General\Logo\GR_Grey.png" />
+    <Content Include="Images\App\General\Logo\GR_Black.png" />
+    <Content Include="Images\Users\Profile\user-default.png" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -99,6 +100,13 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="MasterPages\PaginaBase.Master" />
+    <Content Include="WebForms\Inicio.aspx" />
+    <Content Include="WebForms\Login.aspx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -125,11 +133,50 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="MasterPages\PaginaBase.Master.cs">
+      <DependentUpon>PaginaBase.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\PaginaBase.Master.designer.cs">
+      <DependentUpon>PaginaBase.Master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Inicio.aspx.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Inicio.aspx.designer.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Images\Users\" />
-    <Folder Include="MasterPages\" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GeoRuinFramework\GeoRuinFramework.csproj">
+      <Project>{f85f4de1-097a-46b5-946c-19176e365c60}</Project>
+      <Name>GeoRuinFramework</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
