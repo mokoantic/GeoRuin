@@ -25,7 +25,6 @@ namespace GeoRuin.WebForms
         protected void BTLogin_Click(object sender, EventArgs e)
         {
             DataTable Tabela = null;
-            DataTable dt = (DataTable)(Session["User"]);
 
             string ErroVazio = "<div class=\"alert alert-danger\" role=\"alert\"><strong>Erro:</strong> Preencha os campos de Nome de Utilizador e Password. </div>";
             string ErroLogin = "<div class=\"alert alert-danger\" role=\"alert\"><strong>Erro:</strong> O nome de utilizador e/ou password estão errados.</div>";
@@ -52,17 +51,27 @@ namespace GeoRuin.WebForms
                         }
                         else
                         {
-                            dt.Clear();
+                            DataTable dt = new DataTable();
+
+                            dt.Columns.Add(TabUtilizador.Id, Type.GetType("System.Int32"));
+                            dt.Columns.Add(TabUtilizador.Gru_Id, Type.GetType("System.Int32"));
+                            dt.Columns.Add(TabUtilizador.Login, Type.GetType("System.String"));
+                            dt.Columns.Add(TabUtilizador.PrimeiroNome, Type.GetType("System.String"));
+                            dt.Columns.Add(TabUtilizador.UltimoNome, Type.GetType("System.String"));
+                            dt.Columns.Add(TabUtilizador.PastaFicheiro, Type.GetType("System.String"));
+                            dt.Columns.Add(TabUtilizador.NomeFicheiro, Type.GetType("System.String"));
+                            dt.Columns.Add(TabUtilizador.Email, Type.GetType("System.String"));
 
                             dt.Rows.Add(Tabela.Rows[0][TabUtilizador.Id],
-                                Tabela.Rows[0][TabUtilizador.Gru_Id],
-                                Tabela.Rows[0][TabUtilizador.Login],
-                                Tabela.Rows[0][TabUtilizador.Password],
-                                Tabela.Rows[0][TabUtilizador.PrimeiroNome],
-                                Tabela.Rows[0][TabUtilizador.UltimoNome],
-                                Tabela.Rows[0][TabUtilizador.PastaFicheiro],
-                                Tabela.Rows[0][TabUtilizador.NomeFicheiro],
-                                Tabela.Rows[0][TabUtilizador.Email]);
+                                        Tabela.Rows[0][TabUtilizador.Gru_Id],
+                                        Tabela.Rows[0][TabUtilizador.Login],
+                                        Tabela.Rows[0][TabUtilizador.PrimeiroNome],
+                                        Tabela.Rows[0][TabUtilizador.UltimoNome],
+                                        Tabela.Rows[0][TabUtilizador.PastaFicheiro],
+                                        Tabela.Rows[0][TabUtilizador.NomeFicheiro],
+                                        Tabela.Rows[0][TabUtilizador.Email]);
+
+                            Session["User"] = dt;
 
                             Response.Redirect("/Inicio");
                         }

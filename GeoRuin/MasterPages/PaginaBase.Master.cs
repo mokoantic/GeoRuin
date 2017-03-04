@@ -17,8 +17,15 @@ namespace GeoRuin.MasterPages
             {
                 DataTable user = (DataTable)(Session["User"]);
 
-                _VerificaSessao(user);
-                _CarregaDados(user);
+                if (user != null)
+                {
+                    _VerificaSessao(user);
+                }
+                else
+                {
+                    Response.Redirect("/Home");
+                }
+                              
             }
             catch (Exception ex)
             {
@@ -33,7 +40,11 @@ namespace GeoRuin.MasterPages
             {
                 if (user.Rows.Count == 0)
                 {
-                    Response.Redirect("/Login");
+                    Response.Redirect("/Home");
+                }
+                else
+                {
+                    _CarregaDados(user);
                 }
             }
             catch (Exception ex)
@@ -80,5 +91,19 @@ namespace GeoRuin.MasterPages
             }
         }
 
+        protected void BTLogout_Click(object sender, EventArgs e)
+        {
+            DataTable user = (DataTable)(Session["User"]);
+
+            try
+            {
+                user.Reset();
+                _VerificaSessao(user);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

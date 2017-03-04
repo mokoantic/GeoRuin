@@ -7,72 +7,72 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GeoRuin.MasterPages {
+namespace GeoRuin.WebForms {
     
     
-    public partial class PaginaBase {
+    public partial class Perfil {
         
         /// <summary>
-        /// head control.
+        /// ImgUtil control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.HtmlControls.HtmlImage ImgUtil;
         
         /// <summary>
-        /// form1 control.
+        /// NomeUtil control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl NomeUtil;
         
         /// <summary>
-        /// ScriptManager1 control.
+        /// TBPrimeiroNome control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.ScriptManager ScriptManager1;
+        protected global::System.Web.UI.WebControls.TextBox TBPrimeiroNome;
         
         /// <summary>
-        /// ImgProfile control.
+        /// TBUltimoNome control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlImage ImgProfile;
+        protected global::System.Web.UI.WebControls.TextBox TBUltimoNome;
         
         /// <summary>
-        /// NomeUtilizador control.
+        /// TBEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl NomeUtilizador;
+        protected global::System.Web.UI.WebControls.TextBox TBEmail;
         
         /// <summary>
-        /// BTLogout control.
+        /// UploadFile control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton BTLogout;
+        protected global::System.Web.UI.WebControls.FileUpload UploadFile;
         
         /// <summary>
-        /// ContentPlaceHolder1 control.
+        /// BTGuardar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.Button BTGuardar;
     }
 }

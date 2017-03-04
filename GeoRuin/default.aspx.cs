@@ -14,7 +14,18 @@ namespace GeoRuin
         {
             try
             {
-                //GeoRuinFramework.Classes.TabUtilizador.Metodo.Insert(1, "system", GeoRuinFramework.Classes.TabUtilizador.Metodo.EncriptaPassword("system").ToString(), DBNull.Value, DBNull.Value, DBNull.Value, DBNull.Value, "system@email.com", true);
+                //DataTable Tabela = GeoRuinFramework.Classes.TabUtilizador.Metodo.Select(GeoRuinFramework.Classes.TabUtilizador.Id + "=2");
+                //GeoRuinFramework.Classes.TabUtilizador.Metodo.Update((Int32)(Tabela.Rows[0][GeoRuinFramework.Classes.TabUtilizador.Gru_Id]),
+                //    (string)(Tabela.Rows[0][GeoRuinFramework.Classes.TabUtilizador.Login]), 
+                //    "bruno",
+                //    Tabela.Rows[0][GeoRuinFramework.Classes.TabUtilizador.PrimeiroNome],
+                //    Tabela.Rows[0][GeoRuinFramework.Classes.TabUtilizador.UltimoNome],
+                //    Tabela.Rows[0][GeoRuinFramework.Classes.TabUtilizador.PastaFicheiro],
+                //    Tabela.Rows[0][GeoRuinFramework.Classes.TabUtilizador.NomeFicheiro],
+                //    Tabela.Rows[0][GeoRuinFramework.Classes.TabUtilizador.Email],
+                //    (bool)(Tabela.Rows[0][GeoRuinFramework.Classes.TabUtilizador.EmailConfirmado]),
+                //    (bool)(Tabela.Rows[0][GeoRuinFramework.Classes.TabUtilizador.Activo]),
+                //    (Int32)(Tabela.Rows[0][GeoRuinFramework.Classes.TabUtilizador.Id]));
                 _VerificaSessao();
             }
             catch (Exception ex)
@@ -25,13 +36,13 @@ namespace GeoRuin
 
         private void _VerificaSessao()
         {
-            DataTable dt = (DataTable)(Session["User"]);
+            DataTable user = (DataTable)(Session["User"]);
 
             try
             {
-                if (dt.Rows.Count > 0)
+                if (user != null)
                 {
-                    Response.Redirect("/Inicio");
+                    if (user.Rows.Count != 0) { Response.Redirect("/Inicio"); }                  
                 }
             }
             catch (Exception ex)

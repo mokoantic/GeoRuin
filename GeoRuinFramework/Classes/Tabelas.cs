@@ -449,7 +449,7 @@ namespace GeoRuinFramework.Classes
                     SqlCommand.Parameters.Add(SQLParam[1]);
 
                     SQLParam[2] = new SqlParameter("@" + TabUtilizador.Password, SqlDbType.NVarChar, TabUtilizador.Comprimento.Password);
-                    SQLParam[2].Value = TabUtilizador.Metodo.EncriptaPassword(Uti_Password);
+                    SQLParam[2].Value = Uti_Password;
                     SqlCommand.Parameters.Add(SQLParam[2]);
 
                     SQLParam[3] = new SqlParameter("@" + TabUtilizador.PrimeiroNome, SqlDbType.NVarChar, TabUtilizador.Comprimento.PrimeiroNome);

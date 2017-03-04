@@ -28,7 +28,7 @@
     <form id="form1" runat="server">
         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
 
-        <div class="app layout-fixed-header">
+        <div class="app layout-fixed-header" style="min-height: 99.5vh;">
             <div class="main-panel">
                 <header class="header navbar">
                     <div class="brand visible-xs">
@@ -136,23 +136,23 @@
                         </li>
                         <li>
                             <a data-toggle="dropdown" href="javascript:;">
-                                <img id="ImgProfile" runat="server" alt="user" class="header-avatar img-circle ml10" title="user">
+                                <img id="ImgProfile" runat="server" alt="user" class="header-avatar img-circle ml10">
                                 <span id="NomeUtilizador" runat="server" class="pull-left"></span></a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="#">Perfil</a>
+                                    <asp:LinkButton runat="server" href="/Perfil"><i class="fa fa-user"></i> Perfil</asp:LinkButton>
                                 </li>
                                 <li>
-                                    <a href="javascript:;">Password</a>
+                                    <asp:LinkButton runat="server" href="#" style="color:#aaaaaa; cursor:default;" Enabled="false"><i class="fa fa-lock"></i> Password</asp:LinkButton>
                                 </li>
                                 <%--<li>
                                     <a href="javascript:;"><span class="label bg-danger pull-right">34</span> <span>Notifications</span></a>
                                 </li>--%>
                                 <li>
-                                    <a href="#">Definições</a>
+                                    <asp:linkbutton runat="server" href="#" style="color:#aaaaaa; cursor:default;" Enabled="false"><i class="fa fa-cog"></i> Definições</asp:linkbutton>
                                 </li>
-                                <li>
-                                    <a href="#">Logout</a>
+                                <li class="last-li">
+                                    <asp:LinkButton ID="BTLogout" runat="server" OnClick="BTLogout_Click"><i class="fa fa-sign-out"></i> Logout</asp:LinkButton>
                                 </li>
                             </ul>
                         </li>
