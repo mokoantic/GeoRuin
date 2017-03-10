@@ -77,6 +77,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Images\avatar.21d1cc35.jpg" />
+    <Content Include="Images\Buildings\casa1.png" />
     <Content Include="Images\face1.75317f48.jpg" />
     <Content Include="Images\face3.0306ffff.jpg" />
     <Content Include="Images\face4.cea90747.jpg" />
@@ -86,6 +87,8 @@
     <Content Include="Images\logo.c5cdf202.png" />
     <Content Include="Images\App\General\Logo\GR_Grey.png" />
     <Content Include="Images\App\General\Logo\GR_Black.png" />
+    <Content Include="Images\Markers\devoluto.png" />
+    <Content Include="Images\Markers\parcialmente.png" />
     <Content Include="Images\Users\Profile\user-default.png" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

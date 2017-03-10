@@ -138,3 +138,9 @@
     background-color:#209081;
     color:#fff;
 }
+
+/*Mapa*/
+#map {
+    width:100%;
+    min-height:80vh;
+}

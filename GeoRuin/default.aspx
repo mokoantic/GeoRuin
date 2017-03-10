@@ -19,12 +19,12 @@
     <link href="/Content/css/style.css" rel="stylesheet" />
 
 </head>
-<body>
+<body onload="initialize()">
 
     <form id="form1" runat="server">
         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
 
-        <div class="app layout-fixed-header">
+        <div class="app layout-fixed-header" style="min-height: 99.5vh;">
             <div class="main-panel">
                 <header class="header navbar">
                     <div class="brand visible-xs">
@@ -46,11 +46,21 @@
                         </li>
                     </ul>
                 </header>
+
                 <div class="main-content">
+                    <div class="panel mb25" style="min-height: 78vh; margin-bottom: 0;">
+                        <div class="row">
 
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            </div>
+                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                                <div id="map"></div>
+                            </div>
 
-
+                        </div>
+                    </div>
                 </div>
+
             </div>
             <footer class="content-footer">
                 <nav class="footer-right">
@@ -78,9 +88,87 @@
                 </nav>
             </footer>
         </div>
-
     </form>
 
+    
+
+    <script>       
+        function initMap() {
+
+            var myOptions = {
+                center: new google.maps.LatLng(41.3004883, -7.7440287),
+                zoom: 11,
+                mapTypeId: google.maps.MapTypeId.hybrid
+            };
+
+            var map = new google.maps.Map(document.getElementById("map"), myOptions);
+
+            setMarkers(map, locations)
+        }      
+    </script>
+
+    <script>
+        var locations = [
+            ['/Images/Buildings/casa1.png', 'R. Dr. Otilio Figueiredo 1', 41.296670, -7.736328, '23/12/2016', 'Devoluto', 'Não', '/Images/Markers/devoluto.png'],
+            ['Imagem', 'Edificio tal e coiso', 41.2004883, -7.7440287, '22/12/2016', 'Parcialmente Devoluto', 'Sim', '/Images/Markers/parcialmente.png']
+        ];
+
+        function setMarkers(map, locations) {
+
+            var marker, i
+            var infowindow = new google.maps.InfoWindow()
+
+            for (i = 0; i < locations.length; i++) {
+
+                var imagem = locations[i][0]
+                var morada = locations[i][1]
+                var lat = locations[i][2]
+                var long = locations[i][3]
+                var data = locations[i][4]
+                var estado = locations[i][5]
+                var habitado = locations[i][6]
+                var marker = locations[i][7]
+
+                var posicao = new google.maps.LatLng(lat, long);
+
+                var marker = new google.maps.Marker({
+                    map: map,
+                    title: morada,
+                    position: posicao,
+                    icon: marker
+                });
+                //map.setCenter(marker.getPosition())
+
+                var content = '<div style="width:300px;height:350px;">' +
+                    '<div style="height:150px; width:100%; margin-bottom:20px; background: url(\'' + imagem + '\'); background-size:cover;"></div>' +
+                    '<p><b>Morada</b>: ' + morada + '</p>' +
+                    '<p><b>Latitude</b>: ' + lat + '</p>' +
+                    '<p><b>Longitude</b>: ' + long + '</p>' +
+                    '<p><b>Data</b>:' + data + '</p>' +
+                    '<p><b>Estado</b>: ' + estado + '</p>' +
+                    '<p><b>Habitado</b>: ' + habitado + '</p>' +
+                    '</div>'
+
+                google.maps.event.addListener(marker, 'click', (function (marker, content, infowindow) {
+                    return function () {
+                        map.setZoom(17);
+                        map.panTo(marker.getPosition());
+                        infowindow.setContent(content);
+                        infowindow.open(map, marker);
+                    };
+                })(marker, content, infowindow));
+
+                google.maps.event.addListener(infowindow, 'closeclick', function () {                 
+                    map.setZoom(11);
+                });
+            }
+        }
+    </script>
+
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAReUbNUSClubE6x2jLxi9qIlWQ_o1yEFU&callback=initMap">
+    </script>
+    
     <script src="Scripts/app.js"></script>
     <script src="Scripts/d3.min.js"></script>
     <script src="Scripts/rickshaw.min.js"></script>
