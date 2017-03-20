@@ -58,7 +58,7 @@
                                             <a href="javascript:;"><span class="pull-left mt2 mr15">
                                                 <img alt="" class="avatar avatar-xs img-circle" src="images/avatar.21d1cc35.jpg"></span>
                                                 <div class="overflow-hidden">
-                                                    <span>Sean launched a new application</span> <span class="time">2 seconds ago</span>
+                                                    <span>Pedro adicionou um novo edificio</span> <span class="time">2 segundos atrás</span>
                                                 </div>
                                             </a>
                                         </li>
@@ -70,7 +70,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="overflow-hidden">
-                                                    <span>Removed chrome from app list</span> <span class="time">4 Hours ago</span>
+                                                    <span>Joao removeu um edificio</span> <span class="time">4 horas atràs</span>
                                                 </div>
                                             </a>
                                         </li>
@@ -78,7 +78,7 @@
                                             <a href="javascript:;"><span class="pull-left mt2 mr15">
                                                 <img alt="" class="avatar avatar-xs img-circle" src="images/face3.0306ffff.jpg"></span>
                                                 <div class="overflow-hidden">
-                                                    <span class="text-muted">Jack Hunt has registered</span> <span class="time">9 hours ago</span>
+                                                    <span class="text-muted">José</span> <span class="time">submeteu novo reporte</span>
                                                 </div>
                                             </a>
                                         </li>
@@ -103,7 +103,7 @@
                                             <a href="javascript:;"><span class="pull-left mt2 mr15">
                                                 <img alt="" class="avatar avatar-xs img-circle" src="images/avatar.21d1cc35.jpg"></span>
                                                 <div class="overflow-hidden">
-                                                    <span>Sean launched a new application</span> <span class="time">2 seconds ago</span>
+                                                    <span>Pedro adicionou um novo edificio</span> <span class="time">2 segundos atrás</span>
                                                 </div>
                                             </a>
                                         </li>
@@ -115,7 +115,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="overflow-hidden">
-                                                    <span>Removed chrome from app list</span> <span class="time">4 Hours ago</span>
+                                                    <span>Joao removeu um edificio</span> <span class="time">4 horas atràs</span>
                                                 </div>
                                             </a>
                                         </li>
@@ -123,7 +123,7 @@
                                             <a href="javascript:;"><span class="pull-left mt2 mr15">
                                                 <img alt="" class="avatar avatar-xs img-circle" src="images/face3.0306ffff.jpg"></span>
                                                 <div class="overflow-hidden">
-                                                    <span class="text-muted">Jack Hunt has registered</span> <span class="time">9 hours ago</span>
+                                                    <span class="text-muted">José</span> <span class="time">submeteu novo reporte</span>
                                                 </div>
                                             </a>
                                         </li>
@@ -194,7 +194,7 @@
                 </nav>
             </footer>
             <div class="chat-panel">
-                <div class="chat-inner">
+                <%--<div class="chat-inner">
                     <div class="chat-users">
                         <div class="nav-justified-xs">
                             <ul class="nav nav-tabs nav-justified">
@@ -343,7 +343,7 @@
                             <button class="chat-send"><i class="fa fa-paper-plane"></i></button>
                         </div>
                     </div>
-                </div>
+                </div>--%>
             </div>
         </div>
 

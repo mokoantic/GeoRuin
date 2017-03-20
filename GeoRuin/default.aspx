@@ -16,6 +16,8 @@
     <link href="/Content/font-awesome.css" rel="stylesheet" />
     <link href="/Content/css/climacons/climacons-font.css" rel="stylesheet" />
     <link href="/Content/css/rickshaw/rickshaw.min.css" rel="stylesheet" />
+    <link href="/Content/css/bootstrapcss/datepicker.css" rel="stylesheet" />
+    <link href="/Content/css/bootstrapcss/daterangepicker.css" rel="stylesheet" />
     <link href="/Content/css/style.css" rel="stylesheet" />
 
 </head>
@@ -51,9 +53,68 @@
                     <div class="panel mb25" style="min-height: 78vh; margin-bottom: 0;">
                         <div class="row">
 
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12">
+                                <div class="panel mb25">
+                                    <div class="panel-heading border">Encontre Edifícios</div>
+                                    <div class="panel-body">
+                                        <div class="row no-margin">
+                                            <div class="col-lg-12">
+
+                                                <div class="form-group">
+                                                    <label class="control-label"><b>Estado:</b></label>
+                                                    <div class="col-sm-12">
+                                                        <label class="radio-inline">
+                                                            <input type="radio" name="estado" />Qualquer
+                                                        </label>
+                                                        <label class="radio-inline">
+                                                            <input type="radio" name="estado" />Devoluto
+                                                        </label>
+                                                        <label class="radio-inline">
+                                                            <input type="radio" name="estado" />Parcialmente Devoluto
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group" style="padding-top:30px;">
+                                                    <label class="control-label"><b>Actividade:</b></label>
+                                                    <div class="col-sm-12">
+                                                        <label class="radio-inline">
+                                                            <input type="radio" name="actividade" />Qualquer
+                                                        </label>
+                                                        <label class="radio-inline">
+                                                            <input type="radio" name="actividade" />Edificio Activo
+                                                        </label>
+                                                        <label class="radio-inline">
+                                                            <input type="radio" name="actividade" />Edificio Inactivo
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group" style="padding-top:30px;">
+                                                    <label class="control-label"><b>Data de reporte:</b></label>
+                                                    <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="input-prepend input-group input-group-lg">
+                                                            <span class="add-on input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                            <input class="form-control mb25" data-provide="datepicker" placeholder="De" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="input-prepend input-group input-group-lg">
+                                                            <span class="add-on input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                            <input class="form-control mb25" data-provide="datepicker" placeholder="Até" />
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+
+                            <div class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
                                 <div id="map"></div>
                             </div>
 
@@ -103,17 +164,17 @@
 
             var map = new google.maps.Map(document.getElementById("map"), myOptions);
 
-            setMarkers(map, locations)
+            setMarkers(map)
         }      
     </script>
 
     <script>
         var locations = [
-            ['/Images/Buildings/casa1.png', 'R. Dr. Otilio Figueiredo 1', 41.296670, -7.736328, '23/12/2016', 'Devoluto', 'Não', '/Images/Markers/devoluto.png'],
-            ['Imagem', 'Edificio tal e coiso', 41.2004883, -7.7440287, '22/12/2016', 'Parcialmente Devoluto', 'Sim', '/Images/Markers/parcialmente.png']
+            ['/Images/Buildings/casa1.png', 'R. Dr. Otilio Figueiredo 1', 41.296670, -7.736328, '23/12/2016', 'Devoluto', 'Não', '/Images/Markers/devoluto24.png'],
+            ['Imagem', 'Edificio tal e coiso', 41.2004883, -7.7440287, '22/12/2016', 'Parcialmente Devoluto', 'Sim', '/Images/Markers/parcialmente24.png']
         ];
 
-        function setMarkers(map, locations) {
+        function setMarkers(map) {
 
             var marker, i
             var infowindow = new google.maps.InfoWindow()
@@ -176,6 +237,7 @@
     <script src="Scripts/jquery.flot.resize.js"></script>
     <script src="Scripts/jquery.flot.categories.js"></script>
     <script src="Scripts/jquery.flot.pie.js"></script>
+    <script src="Scripts/datepicker.js"></script>
     <script src="Scripts/costum.js"></script>
 
 </body>

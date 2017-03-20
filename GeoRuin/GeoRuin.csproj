@@ -66,6 +66,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\css\bootstrapcss\datepicker.css" />
+    <Content Include="Content\css\bootstrapcss\daterangepicker.css" />
     <Content Include="Content\css\climacons\climacons-font.css" />
     <Content Include="Content\css\custom\app.css" />
     <Content Include="Content\css\rickshaw\rickshaw.min.css" />
@@ -88,7 +90,15 @@
     <Content Include="Images\App\General\Logo\GR_Grey.png" />
     <Content Include="Images\App\General\Logo\GR_Black.png" />
     <Content Include="Images\Markers\devoluto.png" />
+    <Content Include="Images\Markers\devoluto16.png" />
+    <Content Include="Images\Markers\devoluto24.png" />
+    <Content Include="Images\Markers\devoluto32.png" />
+    <Content Include="Images\Markers\devoluto64.png" />
     <Content Include="Images\Markers\parcialmente.png" />
+    <Content Include="Images\Markers\parcialmente16.png" />
+    <Content Include="Images\Markers\parcialmente24.png" />
+    <Content Include="Images\Markers\parcialmente32.png" />
+    <Content Include="Images\Markers\parcialmente64.png" />
     <Content Include="Images\Users\Profile\user-default.png" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -96,6 +106,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Scripts\app.js" />
+    <Content Include="Scripts\datepicker.js" />
     <Content Include="Scripts\d3.min.js" />
     <Content Include="Scripts\costum.js" />
     <Content Include="fonts\FontAwesome.otf" />
@@ -104,6 +115,7 @@
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="MasterPages\PaginaBase.Master" />
+    <Content Include="Scripts\form-masks.js" />
     <Content Include="WebForms\Inicio.aspx" />
     <Content Include="WebForms\Login.aspx" />
     <Content Include="WebForms\Perfil.aspx" />
@@ -124,7 +136,9 @@
     <Content Include="Scripts\jquery.flot.pie.js" />
     <Content Include="Scripts\jquery.flot.resize.js" />
     <Content Include="Scripts\rickshaw.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="default.aspx.cs">
